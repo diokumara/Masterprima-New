@@ -53,9 +53,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#tentang"><i class="ri-information-line"></i>&nbsp; Tentang</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#profil"><i class="ri-video-on-line"></i>&nbsp; Profil</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#layanan"><i class="ri-hand-coin-line"></i>&nbsp; Layanan</a>
                     </li>
@@ -70,7 +70,10 @@
                             Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-h btn-brand-1" href="https://masterprima.net/blog/">Masuk</a>
+                        <a class="nav-link btn-h btn-brand-1 masuk" href="#">Masuk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-h btn-brand-1 daftar" href="#">Daftar</a>
                     </li>
                 </ul>
             </div>
@@ -81,26 +84,24 @@
     <section id="hero" class="section-padding bg-light">
         <div class="hero container">
             <div class="row align-items-center">
-                <div class="col-sm-12 col-md-6">
-                    <div class="hero-content">
-                        <div class="hero-text" data-aos="fade-up">
-                            <p>Bantu Kamu</p>
-                            <h1>Lulus Seleksi</h1>
-                            <div class="textContainer">
-                                <div class="text text2">CPNS</div>
-                            </div>
-                            <h2>Siap jadi master pelajaran? <br>
-                                <a href="#paket">Paket MASTERPRIMA</a> hadir dengan materi lengkap <br>
+                <div class="hero-content col-sm-12 col-md-6">
+                    <div class="hero-text" data-aos="fade-up">
+                        <p>Bantu Kamu</p>
+                        <h1>Lulus Seleksi</h1>
+                        <div class="textContainer">
+                            <div class="text text2">CPNS</div>
+                        </div>
+                        <h2>Siap jadi master pelajaran? <br>
+                            <a href="#paket">Paket MASTERPRIMA</a> hadir dengan materi lengkap <br>
                                 dan strategi belajar yang bikin kamu unggul!
-                            </h2>
-                        </div>
-                        <br>
-                        <div class="hero-btn" data-aos="fade-up">
-                            <a class="btn-h btn-brand-1 me-2" href="">Masuk</a>
-                            <a class="btn-h btn-brand-2 m2-2" href="">Daftar</a>
-                        </div>
+                        </h2>
                     </div>
-                </div>
+                    <br>
+                    <div class="hero-btn" data-aos="fade-up">
+                        <a class="btn-h btn-brand-1 me-2" href="">Masuk</a>
+                        <a class="btn-h btn-brand-2 m2-2" href="">Daftar</a>
+                    </div>
+               </div>
                 <div class="col-sm-12 col-md-6 d-none d-md-block">
                     <div class="hero-image" data-aos="fade-up" data-aos-delay="10">
                         <img src="./assets/images/hero.png" alt="Hero Image">
@@ -541,14 +542,14 @@
             <div class="paket">
                 <div class="button-group" data-aos="fade-down" data-aos-delay="50">
                     <button class="button active" data-filter="*">Semua</button>
-                    <button class="button" data-filter=".skd">CPNS</button>
-                    <button class="button" data-filter=".skb">KEDINASAN</button>
-                    <button class="button" data-filter=".bimbel">PPPK</button>
+                    <button class="button" data-filter=".cpns">CPNS</button>
+                    <button class="button" data-filter=".kedinasan">KEDINASAN</button>
+                    <button class="button" data-filter=".pppk">PPPK</button>
                 </div>
                 <div class="gallery">
 
                     <!-- Single Table 1-->
-					<div class="col-lg-4 col-md-6 col-12">
+					<div class="item col-lg-4 col-sm-6 cpns">
 						<div class="single-table">
 							<!-- Table Head -->
 							<div class="table-head">
@@ -557,7 +558,7 @@
 								</div>
 								<h4 class="title">Gratis</h4>
 								<div class="price">
-									<p class="amount">Rp. 0<span>/ Tahun</span></p>
+									<p class="amount">Rp 0<span>/ Tahun</span></p>
 								</div>	
 							</div>
 							<!-- Table List -->
@@ -584,7 +585,7 @@
 					<!-- End Single Table 1-->
 
                     <!-- Single Table 2-->
-					<div class="col-lg-4 col-md-6 col-12">
+					<div class="item col-lg-4 col-sm-6 col-12 pppk">
 						<div class="single-table">
 							<!-- Table Head -->
 							<div class="table-head">
@@ -593,7 +594,7 @@
 								</div>
 								<h4 class="title">Gold</h4>
 								<div class="price">
-									<p class="amount">Rp. 0<span>/ Tahun</span></p>
+									<p class="amount">Rp 150.000<span>/ Tahun</span></p>
 								</div>	
 							</div>
 							<!-- Table List -->
@@ -620,7 +621,7 @@
 					<!-- End Single Table 2-->
 
                     <!-- Single Table 3-->
-					<div class="col-lg-4 col-md-6 col-12">
+					<div class="item col-lg-4 col-sm-6 col-12 kedinasan">
 						<div class="single-table">
 							<!-- Table Head -->
 							<div class="table-head">
@@ -629,7 +630,7 @@
 								</div>
 								<h4 class="title">Platinum</h4>
 								<div class="price">
-									<p class="amount">Rp. 0<span>/ Tahun</span></p>
+									<p class="amount">Rp 450.000<span>/ Tahun</span></p>
 								</div>	
 							</div>
 							<!-- Table List -->

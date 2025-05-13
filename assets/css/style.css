@@ -21,6 +21,7 @@
     --font-base: 'Poppins', sans-serif;
     --font-base-2: 'Poppins', helvetica;
     --box-shadow: 0px 15px 25px rgba(48, 0, 0, 0.057);
+    --box-shadow-2: 0px 5px 5px rgba(97, 97, 97, 0.342);
     --transition: all 0.5s ease;
 }
 
@@ -119,7 +120,7 @@ img {
     background-color: var(--c-brand);
     border-color: var(--c-brand);
     color: var(--c-brand-white);
-    box-shadow:3px 3px 3px #494949;
+    box-shadow:var(--box-shadow-2)
 }
 
 .btn-brand-1:hover {
@@ -133,7 +134,7 @@ img {
     background-color: var(--c-brand-white);
     border-color: var(--c-brand-white);
     color: var(--c-brand);
-    box-shadow:3px 3px 3px #494949;
+    box-shadow:var(--box-shadow-2)
 }
 
 .btn-brand-2:hover {
@@ -148,7 +149,7 @@ img {
     background-color: var(--c-brand);
     border-color: var(--c-brand);
     color: var(--c-brand-white);
-    box-shadow:3px 3px 3px #494949;
+    box-shadow:var(--box-shadow-2)
 }
 
 .btn-brand-3:hover {
@@ -187,26 +188,23 @@ HEADER
 NAVBAR
 ======================================== */
 .navbar {
+    padding: 20px 0px;
     box-shadow: var(--box-shadow);
 }
-
 .navbar-brand {
-    width: 120px;
-    height: 60px;
+    width: 40%;
+    height: 40%;
     margin-bottom: 7px;
 }
-
 .navbar-nav .nav-link {
     font-weight: 500;
     color: var(--c-dark);
     margin: 0px 10px;
 }
-
 .navbar-nav .nav-link:hover {
     font-weight: 500;
     color: var(--c-brand-blue);
 }
-
 .navbar-nav .nav-link.active {
     color: #F05737;
 }
@@ -214,22 +212,36 @@ NAVBAR
 /* ========================================
 LOGIN MASUK
 ======================================== */
-.navbar-nav .btn-brand-1 {
-    margin-left: 7rem;
+.navbar-nav .btn-brand-1.masuk {
     padding: 5px 20px;
     color: var(--c-brand-white);
     font-weight: 600;
     font-size: 17px;
-    box-shadow: none;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
-.navbar-nav .btn-brand-1:hover {
-  margin-left: 7rem;
-  padding: 5px 20px;
-  color:  var(--c-brand-blue);
-  background-color: var(--c-brand-secondary);
+.navbar-nav .btn-brand-1.masuk:hover {
+    background-color: var(--c-brand-blue);
+    color:  var(--c-brand-white);
+    font-weight: 600;
+}
+
+
+
+
+.navbar-nav .btn-brand-1.daftar {
+    padding: 5px 20px;
+    background-color: var(--c-brand-white);
+    border-color: var(--c-body);
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+}
+.navbar-nav .btn-brand-1.daftar:hover {
+  background-color: var(--c-brand-blue);
+  color:  var(--c-brand-white);
   font-weight: 600;
-  font-size: 17px;
-  box-shadow: none;
 }
 
 /* ========================================
@@ -293,14 +305,12 @@ HERO
   position: relative;
   width: 100%;
   margin-bottom: 45px;
-  padding: 120px 0 0 0;
   overflow: hidden;
 }
 
 .hero .hero-image {
   position: relative;
   text-align: right;
-  padding-right: 75px;
   margin-bottom: 2.5rem;
 }
 
@@ -355,29 +365,7 @@ HERO
   line-height: 1.7rem;
 }
 
-.hero .hero-btn .btn {
-  margin-top: 35px;
-  color: #EF233C;
-  background: #ffffff;
-  box-shadow: inset 0 0 0 50px #ffffff;
-}
-
-.hero .hero-btn .btn:hover {
-  color: #ffffff;
-  background: transparent;
-  box-shadow: inset 0 0 0 0 #ffffff;
-  border-color: #ffffff;
-}
-
-.hero .hero-btn .btn:first-child {
-  margin-right: 10px;
-}
-
 @media (max-width: 991.98px) {
-  .hero {
-      padding-top: 60px;
-  }
-  
   .hero .hero-content {
       padding: 0 15px;
   }
@@ -402,11 +390,6 @@ HERO
 }
 
 @media (max-width: 767.98px) {
-  .hero {
-      padding-top: 60px;
-      padding-bottom: 60px;
-  }
-  
   .hero,
   .hero .hero-text,
   .hero .hero-btn {
@@ -878,10 +861,12 @@ BACKGROUND PAKET
 PAKET (UNTUK FILTER PAKET)
 ======================================== */
 .paket .button-group{
-  width: 100%;
+  width: 45%;
   padding: 3px 0%;
   background-color: var(--body-clr);
   border-radius: 10px;
+  justify-self: center;
+  flex-wrap: wrap;
 }
 .button-group{
   text-align: center;
@@ -917,6 +902,42 @@ div.gallery{
   flex-wrap: wrap;
 } 
 
+div.gallery .item{
+  position: static;
+  margin: 4px;
+  width: calc(33.33% - 8px);
+  overflow: hidden;
+}
+/* .item img{
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s;
+  margin: 10px;
+}
+div.gallery .item:hover img{
+    transform: scale(1.2);
+} */
+
+.item .ambil-paket {
+  background-color: var(--c-brand);
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  width: calc(100% - 50px);
+  transform: translateX(-50%);
+  padding: 20px;
+  transition: var(--transition);
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.item:hover .ambil-paket {
+  opacity: 1;
+  bottom: 24px;
+}
+
 /*=============================
 	Start Pricing Table CSS
 ===============================*/
@@ -925,14 +946,16 @@ div.gallery{
 	position:relative;
 }
 #paket .single-table {
+  justify-self: center;
+  text-align: center;
+  max-width: 95%;
   border-radius: 15px;
 	background: #fff;
-	border:1px solid #ddd;
-	text-align: center;
+	border: 1px solid #ddd;
 	position: static;
 	overflow: hidden;
 	margin: 15px 0;
-	padding:45px 35px 30px 35px;
+	padding: 45px 35px 30px 35px;
 }
 /* Table Head */
 #paket .single-table .table-head {
@@ -969,6 +992,7 @@ div.gallery{
 #paket .table-list li {
 	position: relative;
 	color: #666;
+  font-size: 15px;
 	text-transform: capitalize;
 	margin-bottom: 18px;
 	padding-right: 32px;
@@ -1179,9 +1203,38 @@ BREAKPOINTS
     margin-top: 1px;
   }
 
+  /* LOGIN MASUK */
+  .navbar-nav .btn-brand-1.masuk {
+      padding: 5px 20px;
+      color: var(--c-brand-white);
+      font-weight: 600;
+      font-size: 17px;
+      margin-left: 4.5rem;
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  .navbar-nav .btn-brand-1.masuk:hover {
+    background-color: var(--c-brand-blue);
+    color:  var(--c-brand-white);
+    font-weight: 600;
+  }
+  .navbar-nav .btn-brand-1.daftar {
+      padding: 5px 20px;
+      background-color: var(--c-brand-white);
+      border-color: var(--c-body);
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 0;
+  }
+  .navbar-nav .btn-brand-1.daftar:hover {
+    background-color: var(--c-brand-blue);
+    color:  var(--c-brand-white);
+    font-weight: 600;
+  }
+
   /* HERO */
   #hero img {
-    min-width: 100%;
+    min-width: 380px;
   }
   .hero .hero-content .textContainer,
   .hero .hero-content .textContainer .text,
@@ -1193,14 +1246,47 @@ BREAKPOINTS
 
   /* TENTANG */
   #tentang img {
-    min-width: 80%;
+    min-width: 370px;
   }
+
+  #profil iframe {
+    position: absolute;
+    transform: translate(10%);
+    max-width: 85%;
+    max-height: 85%;
+  }
+  /* PAKET */
+  /* .paket .button-group{
+  width: 45%;
+  padding: 3px 0%;
+  background-color: var(--body-clr);
+  border-radius: 10px;
+  justify-self: center;
+  } */
 
   /* APPLY */
   #apply img {
     object-fit: cover;
-    min-width: 90%;
+    min-width: 500px;
     margin-bottom: 15px;
     margin-inline: 1rem;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 3px 0px;
+    box-shadow: var(--box-shadow);
+}
+  .navbar-brand {
+    width: 12%;
+    height: 12%;
+    /* margin-bottom: 7px; */
+}
+
+  /* TENTANG */
+  #tentang img {
+    min-width: 420px;
   }
 }
