@@ -43,7 +43,7 @@ h2 {
 }
 
 h3 {
-  color: var(--c-body);
+    color: var(--c-body);
 }
 
 h6 {
@@ -88,11 +88,11 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsla(17, 100%, 43%, 0.5);
+  background-color: hsla(17, 100%, 50%, 0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(49, 100%, 50%);
+  background-color: hsla(207, 100%, 50%, 0.411);
 }
 
 img {
@@ -189,6 +189,9 @@ HEADER
 .header .nav-link{
   align-items: center;
 }
+.header .btn-h {
+  margin: 5px 0px;
+}
 
 .navbar-nav .head-link {
   font-weight: 600;
@@ -206,8 +209,8 @@ NAVBAR
     box-shadow: var(--box-shadow);
 }
 .navbar-brand {
-    min-width: 13%;
-    min-height: 13%;
+    min-width: 10%;
+    min-height: 10%;
     margin-bottom: 7px;
 }
 .navbar-nav .nav-link {
@@ -315,9 +318,14 @@ HERO
 .hero {
   position: relative;
   width: 100%;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   overflow: hidden;
 }
+
+#hero.section-padding {
+  padding-top: 10px;
+  padding-bottom: 0px;
+} 
 
 .hero .hero-image {
   position: relative;
@@ -326,8 +334,8 @@ HERO
 }
 
 .hero .hero-image img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .hero .hero-content {
@@ -342,13 +350,14 @@ HERO
 
 .hero .hero-text {
   justify-self: center;
+  margin-bottom: 30px;
 }
 
 .hero .hero-text p {
   color: var(--c-brand);
   font-size: 50px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .hero .hero-text a {
@@ -375,9 +384,9 @@ HERO
   display: inline-block;
   margin: 0;
   height: 35px;
-  color: #000000;
+  color: #474747;
   font-size: 18.5px;
-  font-weight: 540;
+  font-weight: 300;
   line-height: 1.7rem;
 }
 
@@ -455,7 +464,7 @@ TENTANG
 ======================================== */
 #tentang img {
   object-fit: cover;
-  width: 280px;
+  max-width: 10%;
   margin-bottom: 15px;
   margin-inline: 1rem;
 }
@@ -502,6 +511,10 @@ ICONBOX
 /* ========================================
 TIMELINE (PERJALANAN MENJADI ASN)
 ======================================== */
+#timeline h1 b {
+    color: var(--c-brand);
+}
+
 .timeline {
     position: relative;
     padding: 0;
@@ -674,14 +687,17 @@ TIMELINE (PERJALANAN MENJADI ASN)
 VIDEO PROFIL
 ======================================== */
 #profil h1 {
-  font-size: 40px;
+  font-size: x-large ;
 }
+
+#profil h1 b {
+  color: var(--c-brand-blue);
+}
+
 #profil h2 {
-  font-size: 25.5px;
+  padding: 0px 8px;
+  font-size: medium;
   color: var(--c-brand);
-}
-#profil b {
-  color: var(--c-brand-blue)
 }
 
 #profil iframe {
@@ -697,13 +713,12 @@ VIDEO PROFIL
 /* ========================================
 LAYANAN (INILAH YANG KAMI TAWARKAN)
 ======================================== */
-#layanan h1 {
-    font-size: 40px;
-  }
 #layanan h2 {
-    font-size: 25.5px;
+    font-size: medium;
     color: var(--c-brand);
   }
+
+ #layanan 
 
 .layanan {
     position: relative;
@@ -742,14 +757,6 @@ LAYANAN (INILAH YANG KAMI TAWARKAN)
 /* ========================================
 REVIEW / TESTIMONI
 ======================================== */
-#testimoni h1 {
-  font-size: 40px;
-}
-#testimoni h2 {
-  font-size: 40px;
-  color: var(--c-brand);
-}
-
 .testimoni small {
     font-weight: 600;
     text-transform: uppercase;
@@ -853,21 +860,7 @@ div.gallery{
 
 div.gallery .item{
   position: static;
-  margin: 4px;
-  width: calc(33.33% - 8px);
-  overflow: hidden;
 }
-/* .item img{
-  max-width: 95%;
-  max-height: 95%;
-  object-fit: cover;
-  display: block;
-  transition: 0.3s;
-  margin: 10px;
-}
-div.gallery .item:hover img{
-    transform: scale(1.2);
-} */
 
 .item .ambil-paket {
   background-color: var(--c-brand);
@@ -906,6 +899,21 @@ div.gallery .item:hover img{
 	margin: 15px 0;
 	padding: 45px 35px 30px 35px;
 }
+/* #paket .single-table-fav {
+  justify-self: center;
+  text-align: center;
+  max-width: 95%;
+  border-radius: 15px;
+	background: #fff;
+	border: 1px solid #ddd;
+  position: static;
+	overflow: hidden;
+	margin: 15px 0;
+	padding: 45px 35px 30px 35px;
+  border-color: var(--c-brand-blue);
+  border-width: 3px;
+} */
+
 /* Table Head */
 #paket .single-table .table-head {
 	text-align:center;
@@ -995,18 +1003,17 @@ div.gallery .item:hover img{
 
 
 /* ========================================
-APPLY / BERGABUNG DGN MASTERPRIMA
+APPLY / GABUNG JADI TENTOR
 ======================================== */
-#apply h1 {
-  font-size: 40px;
-}
-#apply h2 {
-  font-size: 25.5px;
-  color: var(--c-brand);
-}
-#apply b {
+#apply h1 b {
   color: var(--c-brand-blue)
 }
+
+#apply h2 {
+  font-size: medium;
+  color: var(--c-brand);
+}
+
 
 #apply img {
   object-fit: cover;
@@ -1148,12 +1155,40 @@ BREAKPOINTS
     min-width: 80%;
   }
 
+  /* PROFIL VIDEO */
+  #profil h1 {
+    font-size: 39px;
+  }
+  #profil h1 b {
+    color: var(--c-brand-blue);
+  }
+  #profil h2 {
+    padding: 0px 8px;
+    font-size: larger;
+    color: var(--c-brand);
+  }
+  #profil iframe {
+    transform: translate(10%);
+  }
+
+  /* LAYANAN */
+  #layanan h1 {
+    font-size: 39px;
+  }
+
+  #layanan h2 {
+    font-size: larger;
+  }
+
   /* APPLY */
   #apply img {
     object-fit: cover;
     min-width: 90%;
     margin-bottom: 15px;
     margin-inline: 1rem;
+  }
+  #apply h2 {
+    font-size: larger;
   }
 }
 
@@ -1185,8 +1220,8 @@ BREAKPOINTS
       margin-bottom: 10px;
   }
   .navbar-nav .btn-brand-1.masuk:hover {
-    background-color: var(--c-brand-blue);
-    color:  var(--c-brand-white);
+    background-color: var(--c-brand-white);
+    color:  var(--c-brand-blue);
     font-weight: 600;
   }
   .navbar-nav .btn-brand-1.daftar {
@@ -1221,8 +1256,6 @@ BREAKPOINTS
   }
 
   #profil iframe {
-    position: absolute;
-    transform: translate(10%);
     max-width: 85%;
     max-height: 85%;
   }
@@ -1264,6 +1297,12 @@ BREAKPOINTS
   /* TENTANG */
   #tentang img {
     min-width: 420px;
+  }
+
+  /* PROFIL VIDEO */
+  #profil iframe {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -1327,6 +1366,7 @@ BREAKPOINTS
 @media (max-width: 575.98px) {
   .hero .hero-text p {
       font-size: 25.5px;
+      line-height: 5px;
   }
   
   .hero .hero-text h1 {
@@ -1334,8 +1374,12 @@ BREAKPOINTS
   }
   
   .hero .hero-text h2 {
-      font-size: 18px;
-      height: 18px;
+      font-size: 15px;
+      line-height: 25px;
+  }
+
+  .hero .hero-text h2 a {
+      font-size: 15px;
   }
   
   .hero .hero-btn .btn {
