@@ -1,4 +1,3 @@
-
 AOS.init({
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 120, // offset (in px) from the original trigger point
@@ -26,5 +25,23 @@ $(window).load(function(){
 
     portfolioIsotope.isotope({ filter: $(this).data('filter') });
   });
-
 })
+
+// ========================================================================= //
+// CLOSE NAVBAR
+// ========================================================================= //
+  const menuBtn = document.getElementById('menu-btn');
+  const navbar = document.getElementById('navbar');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navbar.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+  });
+  // Close navbar when any nav link is clicked (on small screen)
+  navbar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbar.classList.contains('open')) {
+        navbar.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', false);
+      }
+    });
+  });

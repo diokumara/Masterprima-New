@@ -43,10 +43,11 @@
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./assets/images/logo-masterprima.png" alt="img">
+                <img src="./assets/images/logo-masterprima.png" alt="Masterprima Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,20 +55,24 @@
                     <li class="nav-item">
                         <a class="nav-link menu" href="#tentang"><i class="ri-information-line"></i>&nbsp; Tentang</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link menu" href="#profil"><i class="ri-video-on-line"></i>&nbsp; Profil</a>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link menu" href="#layanan"><i class="ri-customer-service-line"></i>&nbsp; Layanan</a>
+                        <a class="nav-link menu" href="#keunggulan"><i class="ri-verified-badge-line"></i>&nbsp;
+                            Keunggulan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu" href="#testimoni"><i class="ri-graduation-cap-line"></i>&nbsp; Testimoni</a>
+                        <a class="nav-link menu" href="#layanan"><i class="ri-customer-service-line"></i>&nbsp;
+                            Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu" href="#testimoni"><i class="ri-graduation-cap-line"></i>&nbsp;
+                            Testimoni</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link menu" href="#paket"><i class="ri-stack-line"></i>&nbsp; Paket</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu" href="https://masterprima.net/blog/"><i class="ri-cursor-line"></i>&nbsp;
+                        <a class="nav-link menu" href="https://masterprima.net/blog/"><i
+                                class="ri-cursor-line"></i>&nbsp;
                             Blog</a>
                     </li>
                     <li class="nav-item">
@@ -81,7 +86,7 @@
         </div>
     </nav>
 
-    <!-- Hero Start -->
+    <!-- HERO -->
     <section id="hero" class="section-padding bg-light border-bottom">
         <div class="hero container">
             <div class="row ">
@@ -102,7 +107,7 @@
                         <a class="btn-h btn-brand-1 me-2" href="">Masuk</a>
                         <a class="btn-h btn-brand-2 m2-2" href="">Daftar</a>
                     </div>
-               </div>
+                </div>
                 <div class="col-sm-12 col-md-6 d-none d-md-block">
                     <div class="hero-image" data-aos="fade-up" data-aos-delay="10">
                         <img src="./assets/images/hero.png" alt="Hero Image">
@@ -111,7 +116,6 @@
             </div>
         </div>
     </section>
-    <!-- Hero End -->
 
     <!-- TENTANG -->
     <section id="tentang" class="section-padding">
@@ -152,81 +156,70 @@
                     </div>
                 </div>
             </div>
-            <br><br>
-            
-            <ul class="timeline" data-aos="fade-down" data-aos-delay="150">
-                    <li data-aos="fade-right" data-aos-delay="150">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/TIMELINE-1.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="subheading">Penasaran dengan strategi jitu menaklukkan soal CPNS? </h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Mau tips & trik ahli? Kepoin media sosial Masterprima Online sekarang! Temukan konten informatif di @masterprimapusat, @bimbelmasterprima, dan @masterprimaofficial!
-                                </p>
-                            </div>
+
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge orange"><i class="ri-phone-find-line"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Penasaran dengan strategi jitu menaklukkan soal CPNS?</h4>
                         </div>
-                    </li>
-                    <li class="timeline-inverted" data-aos="fade-left" data-aos-delay="150">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/TIMELINE-2.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="subheading">Jangan berjuang sendirian!</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Ingin sukses jadi ASN? Bergabunglah dengan komunitas belajar di Masterprima Online! Cukup buat akun dan pilih paket untuk menikmati fasilitas belajar terarah dan dukungan penuh kami.
-                                </p>
-                            </div>
+                        <div class="timeline-body">
+                            <p>Kepoin media sosial Masterprima Online sekarang! Temukan tips & trik ahli di
+                                @masterprimapusat, @bimbelmasterprima, dan @masterprimaofficial!</p>
                         </div>
-                    </li>
-                    <li data-aos="fade-right" data-aos-delay="150">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/TIMELINE-3.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="subheading">Sudah mulai klik dengan materinya?</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Makin semangat belajar? Yuk, berbagi ilmu dan berdiskusi! Tertarik dengan peringkatmu? Ikuti Try Out Serentak dan tantang dirimu!
-                                </p>
-                            </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge yellow"><i class="ri-group-line"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Jangan berjuang sendirian!</h4>
                         </div>
-                    </li>
-                    <li class="timeline-inverted" data-aos="fade-left" data-aos-delay="150">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/TIMELINE-4.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="subheading">Yakin bisa, pasti bisa!</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Saatnya tunjukkan bahwa kamu layak meraihnya. Hadapi setiap soal dengan mantap dan buktikan kemampuanmu dengan skor yang membanggakan!
-                                </p>
-                            </div>
+                        <div class="timeline-body">
+                            <p>Ingin sukses jadi ASN? Bergabunglah dengan komunitas belajar di Masterprima Online! Cukup
+                                buat akun dan pilih paket untuk menikmati fasilitas belajar terarah dan dukungan penuh
+                                kami.</p>
                         </div>
-                    </li>
-                    <li data-aos="fade-right" data-aos-delay="150">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/TIMELINE-5.png" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="subheading">Ini Bukan Hanya Tentangmu!</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Berjuanglah meraih cita-cita ASN, untuk senyum bangga orang tuamu! Mari berbagi pengalaman bahagia bersama Alumni Masterprima Online nanti.
-                                </p>
-                            </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge blue"><i class="ri-file-edit-line"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Sudah mulai klik dengan materinya?</h4>
                         </div>
-                    </li>
-                    <li class="timeline-inverted" data-aos="fade-down" data-aos-delay="150">
-                        <div class="timeline-image">
-                            <h4>
-                                Raih
-                                <br />
-                                Mimpimu
-                                <br />
-                                Sekarang!
-                            </h4>
+                        <div class="timeline-body">
+                            <p>Makin semangat belajar? Yuk, berbagi ilmu dan berdiskusi! Tertarik dengan peringkatmu?
+                                Ikuti Try Out Serentak dan tantang dirimu!</p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge yellow"><i class="ri-medal-line"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Yakin bisa, pasti bisa!</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Saatnya tunjukkan bahwa kamu layak meraihnya. Hadapi setiap soal dengan mantap dan
+                                buktikan kemampuanmu dengan skor yang membanggakan!</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge orange"><i class="ri-rocket-line"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Ini Bukan Hanya Tentangmu!</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Berjuanglah meraih cita-cita ASN, untuk senyum bangga orang tuamu! Mari berbagi
+                                pengalaman bahagia bersama Alumni Masterprima Online nanti.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -256,97 +249,100 @@
     </section>
 
     <!-- KEUNGGULAN -->
-    <section id="keunggulan" class="section-padding bg-light border-top">    
-    <div class="container">
-      <div class="row">
-         <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+    <section id="keunggulan" class="section-padding bg-light border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                     <div class="section-title">
                         <h1 class="display-5 fw-semibold"> Lebih dari Sekadar Bimbel</h1>
-                        <h2 class="display-5 fw-semibold">Inilah Keunggulan Nyata Belajar Bersama <b>MASTERPRIMA</b></h2>
+                        <h2 class="display-5 fw-semibold">Inilah Keunggulan Nyata Belajar Bersama <b>MASTERPRIMA</b>
+                        </h2>
                         <div class="line"></div><br>
                     </div>
                 </div>
 
-        <div class="col-lg-4">
-          <div class="phone-image" data-aos="fade-down" data-aos-delay="150">
-            <img src="assets/images/hp.png" alt="foto-hp">
-          </div>
-        </div>
-        <div class="col-lg-8 align-self-center">
-          <div class="services">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
-                  <div class="icon">
-                    <img src="assets/images/KEUNGGULAN-1.png" alt="reporting">
-                  </div>
-                  <div class="right-text">
-                    <h4>Akses Materi CPNS di Genggamanmu!</h4>
-                    <p>Belajar try out, materi, dan video kini fleksibel dengan smartphone dan laptop.</p>
-                  </div>
+                <div class="col-lg-4">
+                    <div class="phone-image" data-aos="fade-down" data-aos-delay="150">
+                        <img src="assets/images/hp.png" alt="Smartphone Image">
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
-                  <div class="icon">
-                    <img src="assets/images/KEUNGGULAN-2.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Lulus dengan Kisi-Kisi Paling Update!</h4>
-                    <p>Materi selalu up-to-date sesuai kisi-kisi CPNS terbaru. Yakin Anda pasti bisa!</p>
-                  </div>
+                <div class="col-lg-8 align-self-center">
+                    <div class="services">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
+                                    <div class="icon">
+                                        <img src="assets/images/keunggulan/KEUNGGULAN-1.svg" alt="Keunggulan-1">
+                                    </div>
+                                    <div class="right-text">
+                                        <h4>Akses Materi CPNS di Genggamanmu!</h4>
+                                        <p>Belajar try out, materi, dan video kini fleksibel dengan smartphone dan
+                                            laptop.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
+                                    <div class="icon">
+                                        <img src="assets/images/keunggulan/KEUNGGULAN-2.svg" alt="Keunggulan-2">
+                                    </div>
+                                    <div class="right-text">
+                                        <h4>Lulus dengan Kisi-Kisi Paling Update!</h4>
+                                        <p>Materi selalu up-to-date sesuai kisi-kisi CPNS terbaru. Yakin Anda pasti
+                                            bisa!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
+                                    <div class="icon">
+                                        <img src="assets/images/keunggulan/KEUNGGULAN-3.svg" alt="Keunggulan-3">
+                                    </div>
+                                    <div class="right-text">
+                                        <h4>Bingung? Curhat ke Pengajar Kompeten!</h4>
+                                        <p>Jangan bingung sendiri! Pengajar kami siap bantu soal seleksi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
+                                    <div class="icon">
+                                        <img src="assets/images/keunggulan/KEUNGGULAN-4.svg" alt="Keunggulan-4">
+                                    </div>
+                                    <div class="right-text">
+                                        <h4>Kelola Waktumu dengan Cerdas!</h4>
+                                        <p>Efisiensikan belajarmu dengan memantau durasi pengerjaan soal!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
+                                    <div class="icon">
+                                        <img src="assets/images/keunggulan/KEUNGGULAN-5.svg" alt="Keunggulan-5">
+                                    </div>
+                                    <div class="right-text">
+                                        <h4>Lihat Posisimu, dibanding Pesaingmu</h4>
+                                        <p>Uji Levelmu di Kompetisi ASN Seluruh Indonesia!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
+                                    <div class="icon">
+                                        <img src="assets/images/keunggulan/KEUNGGULAN-6.svg" alt="Keunggulan-6">
+                                    </div>
+                                    <div class="right-text">
+                                        <h4>Kenali Potensimu Lebih Dalam!</h4>
+                                        <p>Visualisasikan hasil belajarmu untuk strategi belajar efektif.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
-                  <div class="icon">
-                    <img src="assets/images/KEUNGGULAN-3.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Bingung? Curhat ke Pengajar Kompeten!</h4>
-                    <p>Jangan bingung sendiri! Pengajar kami siap bantu soal seleksi.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
-                  <div class="icon">
-                    <img src="assets/images/KEUNGGULAN-4.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Kelola Waktumu dengan Cerdas!</h4>
-                    <p>Efisiensikan belajarmu dengan memantau durasi pengerjaan soal!</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
-                  <div class="icon">
-                    <img src="assets/images/KEUNGGULAN-5.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Lihat Posisimu, dibanding Pesaingmu</h4>
-                    <p>Uji Levelmu di Kompetisi ASN Seluruh Indonesia!</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item wow fadeIn" data-aos="fade-down" data-aos-delay="150">
-                  <div class="icon">
-                    <img src="assets/images/KEUNGGULAN-6.png" alt="">
-                  </div>
-                  <div class="right-text">
-                    <h4>Kenali Potensimu Lebih Dalam!</h4>
-                    <p>Visualisasikan hasil belajarmu untuk strategi belajar efektif.</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- YANG KAMI TAWARKAN / LAYANAN -->
     <section id="layanan" class="section-padding border-top">
@@ -379,7 +375,9 @@
                         </div>
                         <h5 class="mt-4 mb-3">Bongkar Materi Seleksi Via Video!</h5>
                         <p>Jangan cuma hafalin, pahami! Tonton video series yang membongkar tuntas materi seleksi, mulai
-                            dari pondasi hingga level tinggi. Dijamin, kamu bakal "klik!" dan siap menghadapi ujian! <br></p>
+                            dari pondasi hingga level tinggi. Dijamin, kamu bakal "klik!" dan siap menghadapi ujian!
+                            <br>
+                        </p>
                         <br>
                     </div>
                 </div>
@@ -457,10 +455,12 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>"Masterprima tempat terbaik belajar dalam mempersiapkan diri untuk mengikuti tes CPNS. Materinya lengkap. Soal-soalnya berkualitas. Model pembelajarannya menyenangkan dan dapat menyusun strategi belajar dengan baik”</p>
+                            <p>"Masterprima tempat terbaik belajar dalam mempersiapkan diri untuk mengikuti tes CPNS.
+                                Materinya lengkap. Soal-soalnya berkualitas. Model pembelajarannya menyenangkan dan
+                                dapat menyusun strategi belajar dengan baik”</p>
                         </div>
                         <div class="testimoni-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/testimoni mp.svg" alt="">
+                            <img class="rounded-circle" src="./assets/images/testimoni/testimoni-1.jpg" alt="Testimoni-Person-1">
                             <div class="ms-3">
                                 <h5>Ariyanto Wibowo</h5>
                                 <small>Dokter Spesialis Forensik</small>
@@ -478,10 +478,11 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>“Suasana belajar menyenangkan, tentor yang berkualitas, fasilitas nyaman. Sangat membantu bagi saya yang baru pertama kali mengikuti seleksi CPNS”</p>
+                            <p>“Suasana belajar menyenangkan, tentor yang berkualitas, fasilitas nyaman. Sangat membantu
+                                bagi saya yang baru pertama kali mengikuti seleksi CPNS”</p>
                         </div>
                         <div class="testimoni-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/rahmi.svg" alt="">
+                            <img class="rounded-circle" src="./assets/images/testimoni/testimoni-2.jpg" alt="Testimoni-Person-2">
                             <div class="ms-3">
                                 <h5>Rahmi Dini Ariyanti</h5>
                                 <small>Bidan RSU Karsa Husada Batu</small>
@@ -499,10 +500,12 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>“Tentornya top-top banget, enggak nyesel bimbingan di Masterprima. Meskipun daftarnya mepet masih dilayani. Metode pembelajarannya enak, bikin gampang dimengerti. Terima kasih Masterprima"</p>
+                            <p>“Tentornya top-top banget, enggak nyesel bimbingan di Masterprima. Meskipun daftarnya
+                                mepet masih dilayani. Metode pembelajarannya enak, bikin gampang dimengerti. Terima
+                                kasih Masterprima"</p>
                         </div>
                         <div class="testimoni-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/marifatul.svg" alt="">
+                            <img class="rounded-circle" src="./assets/images/testimoni/testimoni-3.jpeg" alt="Testimoni-Person-3">
                             <div class="ms-3">
                                 <h5>Ma'rifatul Ula</h5>
                                 <small>Dokter Spesialis Forensik</small>
@@ -520,10 +523,14 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>“Awal kenal Masterprima dari rekomendasi teman. Alhamdulillah saya cocok terbantu sekali dengan materi yang disajikan. Ditambah “tips and trick” dari tutor untuk optimalisasi waktu dalam mengerjakan soal-soal CPNS. Terima kasih dan sukses selalu untuk Masterprima"</p>
+                            <p>“Awal kenal Masterprima dari rekomendasi teman. Alhamdulillah saya cocok terbantu sekali
+                                dengan materi yang disajikan. Ditambah “tips and trick” dari tutor untuk optimalisasi
+                                waktu dalam mengerjakan soal-soal CPNS. Terima kasih dan sukses selalu untuk
+                                Masterprima"</p>
                         </div>
                         <div class="testimoni-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/Foto Testimoni/2.jpg" alt="">
+                            <img class="rounded-circle" src="./assets/images/Foto Testimoni/2.jpg"
+                                alt="Testimoni-Person-4">
                             <div class="ms-3">
                                 <h5>Endah Septa Sinitya</h5>
                                 <small> - </small>
@@ -541,10 +548,12 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>“Terima kasih bimbel Masterprima Sawojajar. Bimbingannya sangat bermanfaat sekali saat SKD.  Mungkin bisa diadakan juga bimbel untuk SKB…. Terima kasih”</p>
+                            <p>“Terima kasih bimbel Masterprima Sawojajar. Bimbingannya sangat bermanfaat sekali saat
+                                SKD. Mungkin bisa diadakan juga bimbel untuk SKB…. Terima kasih”</p>
                         </div>
                         <div class="testimoni-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/Foto Testimoni/2.jpg" alt="">
+                            <img class="rounded-circle" src="./assets/images/Foto Testimoni/2.jpg"
+                                alt="Testimoni-Person-5">
                             <div class="ms-3">
                                 <h5>Ming Narto Wijaya</h5>
                                 <small> - </small>
@@ -562,10 +571,13 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p>“Penyajian inovatif dan atraktif dari para instruktur yang aktif dan cerdas membuat transaksi pembelajaran seru dan kompetitif, disertai modul/buku bank soal dilengkapi pembahasan. Masterprima memang TOP"</p>
+                            <p>“Penyajian inovatif dan atraktif dari para instruktur yang aktif dan cerdas membuat
+                                transaksi pembelajaran seru dan kompetitif, disertai modul/buku bank soal dilengkapi
+                                pembahasan. Masterprima memang TOP"</p>
                         </div>
                         <div class="testimoni-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/Foto Testimoni/2.jpg" alt="">
+                            <img class="rounded-circle" src="./assets/images/Foto Testimoni/2.jpg"
+                                alt="Testimoni-Person-6">
                             <div class="ms-3">
                                 <h5>Andika Bagus NRP.</h5>
                                 <small> - </small>
@@ -598,112 +610,133 @@
                 <div class="gallery">
 
                     <!-- Single Table 1-->
-					<div class="item col-lg-4 col-md-6 col-sm-12 col-12 cpns">
-						<div class="single-table" data-aos="fade-down" data-aos-delay="150">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont icofont-ui-cut"></i>
-								</div>
-								<h4 class="title">Gratis</h4>
-								<div class="price">
-									<p class="amount">Rp 0<span>/ Tahun</span></p>
-								</div>	
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="ri-check-fill"></i>Try Out Gratis: Latihan Ujian Kapan Saja.</li>
-								<li><i class="ri-check-fill"></i>Try Out CAT SKD: Simulasi Ujian Asli.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Kunci & Pembahasan: Jawaban Lengkap Try Out.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Latihan Soal SKD: TWK, TIU, TKP Lengkap.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Materi SKD Terbaru: Informasi Terkini.</li>
+                    <div class="item col-lg-4 col-md-6 col-sm-12 col-12 cpns">
+                        <div class="single-table" data-aos="fade-down" data-aos-delay="150">
+                            <!-- Table Head -->
+                            <div class="table-head">
+                                <div class="icon">
+                                    <i class="icofont icofont-ui-cut"></i>
+                                </div>
+                                <h4 class="title">Gratis</h4>
+                                <div class="price">
+                                    <p class="amount">Rp 0<span>/ Tahun</span></p>
+                                </div>
+                            </div>
+                            <!-- Table List -->
+                            <ul class="table-list">
+                                <li><i class="ri-check-fill"></i>Try Out Gratis: Latihan Ujian Kapan Saja.</li>
+                                <li><i class="ri-check-fill"></i>Try Out CAT SKD: Simulasi Ujian Asli.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Kunci & Pembahasan: Jawaban Lengkap Try
+                                    Out.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Latihan Soal SKD: TWK, TIU, TKP Lengkap.
+                                </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Materi SKD Terbaru: Informasi Terkini.
+                                </li>
                                 <li class="cross"><i class="ri-close-fill"></i>Ranking Nasional: Lihat Posisi Kamu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Try Out Platinum + Video: Simulasi CAT & Pembahasan Video. </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Try Out Platinum + Video: Simulasi CAT &
+                                    Pembahasan Video. </li>
                                 <li class="cross"><i class="ri-close-fill"></i>Analisa Waktu: Kelola Waktu Ujianmu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Data Nilai Peserta Lain: Bandingkan Hasilmu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Video Materi SKD: Belajar dengan Video.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Video Series SKD: Belajar Bertahap dengan Video.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Data Nilai Peserta Lain: Bandingkan
+                                    Hasilmu.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Video Materi SKD: Belajar dengan Video.
+                                </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Video Series SKD: Belajar Bertahap dengan
+                                    Video.</li>
                                 <li class="cross"><i class="ri-close-fill"></i>Masa Aktif : 6 bulan</li>
-							</ul>
-							<div class="table-bottom">
-								<a class="btn-h btn-brand-1" href="#">Ambil Paket</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table 1-->
+                            </ul>
+                            <div class="table-bottom">
+                                <a class="btn-h btn-brand-1" href="#">Ambil Paket</a>
+                            </div>
+                            <!-- Table Bottom -->
+                        </div>
+                    </div>
+                    <!-- End Single Table 1-->
 
                     <!-- Single Table 2-->
-					<div class="item col-lg-4 col-md-6 col-sm-12 col-12 kedinasan">
-						<div class="single-table" data-aos="fade-down" data-aos-delay="150">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont icofont-ui-cut"></i>
-								</div>
-								<h4 class="title">Gold</h4>
-								<div class="price">
-									<p class="amount">Rp 150.000<span>/ Tahun</span></p>
-								</div>	
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="ri-check-fill"></i>Try Out Gratis: Latihan Ujian Kapan Saja.</li>
-								<li><i class="ri-check-fill"></i>Try Out CAT SKD: Simulasi Ujian Asli.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Kunci & Pembahasan: Jawaban Lengkap Try Out.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Latihan Soal SKD: TWK, TIU, TKP Lengkap.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Materi SKD Terbaru: Informasi Terkini.</li>
+                    <div class="item col-lg-4 col-md-6 col-sm-12 col-12 kedinasan">
+                        <div class="single-table" data-aos="fade-down" data-aos-delay="150">
+                            <!-- Table Head -->
+                            <div class="table-head">
+                                <div class="icon">
+                                    <i class="icofont icofont-ui-cut"></i>
+                                </div>
+                                <h4 class="title">Gold</h4>
+                                <div class="price">
+                                    <p class="amount">Rp 150.000<span>/ Tahun</span></p>
+                                </div>
+                            </div>
+                            <!-- Table List -->
+                            <ul class="table-list">
+                                <li><i class="ri-check-fill"></i>Try Out Gratis: Latihan Ujian Kapan Saja.</li>
+                                <li><i class="ri-check-fill"></i>Try Out CAT SKD: Simulasi Ujian Asli.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Kunci & Pembahasan: Jawaban Lengkap Try
+                                    Out.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Latihan Soal SKD: TWK, TIU, TKP Lengkap.
+                                </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Materi SKD Terbaru: Informasi Terkini.
+                                </li>
                                 <li class="cross"><i class="ri-close-fill"></i>Ranking Nasional: Lihat Posisi Kamu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Try Out Platinum + Video: Simulasi CAT & Pembahasan Video. </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Try Out Platinum + Video: Simulasi CAT &
+                                    Pembahasan Video. </li>
                                 <li class="cross"><i class="ri-close-fill"></i>Analisa Waktu: Kelola Waktu Ujianmu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Data Nilai Peserta Lain: Bandingkan Hasilmu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Video Materi SKD: Belajar dengan Video.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Video Series SKD: Belajar Bertahap dengan Video.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Data Nilai Peserta Lain: Bandingkan
+                                    Hasilmu.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Video Materi SKD: Belajar dengan Video.
+                                </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Video Series SKD: Belajar Bertahap dengan
+                                    Video.</li>
                                 <li class="cross"><i class="ri-close-fill"></i>Masa Aktif : 6 bulan</li>
-							</ul>
-							<div class="table-bottom">
-								<a class="btn-h btn-brand-1" href="#">Ambil Paket</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table 2-->
+                            </ul>
+                            <div class="table-bottom">
+                                <a class="btn-h btn-brand-1" href="#">Ambil Paket</a>
+                            </div>
+                            <!-- Table Bottom -->
+                        </div>
+                    </div>
+                    <!-- End Single Table 2-->
 
                     <!-- Single Table 3-->
-					<div class="item col-lg-4 col-md-6 col-sm-12 col-12 pppk">
-						<div class="single-table" data-aos="fade-down" data-aos-delay="150">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont icofont-ui-cut"></i>
-								</div>
-								<h4 class="title">Platinum</h4>
-								<div class="price">
-									<p class="amount">Rp 450.000<span>/ Tahun</span></p>
-								</div>	
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="ri-check-fill"></i>Try Out Gratis: Latihan Ujian Kapan Saja.</li>
-								<li><i class="ri-check-fill"></i>Try Out CAT SKD: Simulasi Ujian Asli.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Kunci & Pembahasan: Jawaban Lengkap Try Out.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Latihan Soal SKD: TWK, TIU, TKP Lengkap.</li>
-								<li class="cross"><i class="ri-close-fill"></i>Materi SKD Terbaru: Informasi Terkini.</li>
+                    <div class="item col-lg-4 col-md-6 col-sm-12 col-12 pppk">
+                        <div class="single-table" data-aos="fade-down" data-aos-delay="150">
+                            <!-- Table Head -->
+                            <div class="table-head">
+                                <div class="icon">
+                                    <i class="icofont icofont-ui-cut"></i>
+                                </div>
+                                <h4 class="title">Platinum</h4>
+                                <div class="price">
+                                    <p class="amount">Rp 450.000<span>/ Tahun</span></p>
+                                </div>
+                            </div>
+                            <!-- Table List -->
+                            <ul class="table-list">
+                                <li><i class="ri-check-fill"></i>Try Out Gratis: Latihan Ujian Kapan Saja.</li>
+                                <li><i class="ri-check-fill"></i>Try Out CAT SKD: Simulasi Ujian Asli.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Kunci & Pembahasan: Jawaban Lengkap Try
+                                    Out.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Latihan Soal SKD: TWK, TIU, TKP Lengkap.
+                                </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Materi SKD Terbaru: Informasi Terkini.
+                                </li>
                                 <li class="cross"><i class="ri-close-fill"></i>Ranking Nasional: Lihat Posisi Kamu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Try Out Platinum + Video: Simulasi CAT & Pembahasan Video. </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Try Out Platinum + Video: Simulasi CAT &
+                                    Pembahasan Video. </li>
                                 <li class="cross"><i class="ri-close-fill"></i>Analisa Waktu: Kelola Waktu Ujianmu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Data Nilai Peserta Lain: Bandingkan Hasilmu.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Video Materi SKD: Belajar dengan Video.</li>
-                                <li class="cross"><i class="ri-close-fill"></i>Video Series SKD: Belajar Bertahap dengan Video.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Data Nilai Peserta Lain: Bandingkan
+                                    Hasilmu.</li>
+                                <li class="cross"><i class="ri-close-fill"></i>Video Materi SKD: Belajar dengan Video.
+                                </li>
+                                <li class="cross"><i class="ri-close-fill"></i>Video Series SKD: Belajar Bertahap dengan
+                                    Video.</li>
                                 <li class="cross"><i class="ri-close-fill"></i>Masa Aktif : 6 bulan</li>
-							</ul>
-							<div class="table-bottom">
-								<a class="btn-h btn-brand-1" href="#">Ambil Paket</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table 3-->
+                            </ul>
+                            <div class="table-bottom">
+                                <a class="btn-h btn-brand-1" href="#">Ambil Paket</a>
+                            </div>
+                            <!-- Table Bottom -->
+                        </div>
+                    </div>
+                    <!-- End Single Table 3-->
                 </div>
             </div>
     </section>
@@ -722,7 +755,7 @@
             </div>
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
-                    <img src="./assets/images/apply.png" alt="img">
+                    <img src="./assets/images/apply.png" alt="Apply Image">
                 </div>
                 <div data-aos="fade-down" data-aos-delay="50" class="col-lg-5">
                     <p class="mt-3 mb-4">Saatnya beraksi! Bantu teman-teman pejuang ASN sukses. Daftar sekarang sebelum
@@ -741,17 +774,16 @@
             <div class="container">
                 <div class="row gy-5">
                     <div class="col-lg-3 col-sm-6">
-                        <a href="#"><img src="./assets/images/logo-masterprima.png" class="logo-footer"></a>
+                        <a href="#"><img src="./assets/images/logo-masterprima.png" class="logo-footer"
+                                alt="Masterprima Logo"></a>
                         <div class="line"></div>
                         <h5 class="mb-4 text-white"><b>PT Masterprima Juara Indonesia</b></h5>
 
                         <div class="social-icons">
                             <a href="https://www.instagram.com/masterprimapusat/?hl=en"><i
                                     class="ri-instagram-fill"></i></a>
-                            <!-- <a href="https://www.facebook.com/share/1AcYY2YgZ7/"><i class="ri-facebook-fill"></i></a> -->
                             <a href="https://www.tiktok.com/@bimbelmasterprima?_t=ZS-8vxIHMIWNrs&_r=1"><i
                                     class="ri-tiktok-fill"></i></a>
-                            <!-- <a href="#"><i class="ri-twitter-x-line"></i></a> -->
                             <a href="https://www.youtube.com/@masterprimaofficial1083"><i
                                     class="ri-youtube-fill"></i></a>
                         </div>
@@ -868,5 +900,4 @@
         }
         textReplace();
     </script>
-
 </body>
