@@ -84,16 +84,24 @@ p {
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
-  width: .6rem;
+  width: .65rem;
   background-color: hsla(0, 0%, 87%, 0.767);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: hsla(17, 100%, 50%, 0.5);
+  border-radius: 7%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsla(207, 100%, 50%, 0.411);
+}
+
+::-webkit-scrollbar-button {
+  background-color: hsla(17, 100%, 50%, 0.5);
+  width: 10px;
+  height: 12px;
+  cursor: pointer;
 }
 
 img {
@@ -198,7 +206,7 @@ HEADER
   font-weight: 600;
   color: var(--c-brand-white);
 }
-.navbar-atas{
+.header-atas{
   background-color: #F05737;
 }
 
@@ -265,7 +273,7 @@ LOGIN MASUK / DAFTAR
 /* ========================================
 WA FLOATING BUTTON
 ======================================== */
-.wa_button {
+/* .wa_button {
   font-size: 15px;
   position: fixed;
   right: 30px;
@@ -280,7 +288,6 @@ WA FLOATING BUTTON
   color: var(--c-brand-white);
   font-weight: 550;
 }
-
 .wa_button i {
   font-size: 35px;
   padding: 10px 10px;
@@ -295,7 +302,6 @@ WA FLOATING BUTTON
   right: 133px;
   color: var(--c-brand-white);
 }
-
 .wa_button, .wa_button i {
   z-index: 3;
 }
@@ -314,7 +320,126 @@ WA FLOATING BUTTON
     right: 0;
     transition: ease-in-out;
   }
+} */
+
+/* ========================================
+WA FLOATING BUTTON V2
+======================================== */
+/* Floating WhatsApp Button Styles */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
 }
+.floating-whatsapp a {
+    text-decoration: none;
+}
+.floating-whatsapp i {
+    font-size: 40px;
+}
+.floating-whatsapp i:hover {
+    color: #25D366;
+}
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: var(--c-brand-white);
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.whatsapp-button:hover {
+    background-color: var(--c-brand-white);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #25D366;
+    color: var(--c-brand-white);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.floating-whatsapp:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 75px;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.whatsapp-button {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+    }    
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+    .floating-whatsapp i {
+    font-size: 35px;
+  }
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+
+/* SCROLL UP BTN */
+/* .to-top {
+  background: var(--c-brand);
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--c-brand-white);
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+} */
 
 /* ========================================
 HERO
@@ -325,57 +450,46 @@ HERO
   margin-bottom: 25px;
   overflow: hidden;
 }
-
 #hero.section-padding {
-  padding-top: 10px;
-  padding-bottom: 0px;
+  padding: 50px 0px;
 } 
-
 .hero .hero-image {
   position: relative;
   text-align: right;
   margin-bottom: 2.5rem;
 }
-
 .hero .hero-image img {
   max-width: 80%;
   max-height: 80%;
 }
-
 .hero .hero-content {
   position: relative;
-  padding-left: 75px;
   margin-bottom: 20px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 }
-
 .hero .hero-text {
   justify-self: center;
   margin-bottom: 30px;
 }
-
 .hero .hero-text p {
   color: var(--c-brand);
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 25px;
 }
-
 .hero .hero-text a {
   color: var(--c-brand);
   font-size: 20px;
   font-weight: 550;
   margin-bottom: 15px;
 }
-
 .hero .hero-text a:hover {
   color: var(--c-brand-blue);
   text-decoration: underline;
 }
-
 .hero .hero-text h1 {
   color: #000000;
   font-size: 60px;
@@ -383,7 +497,6 @@ HERO
   letter-spacing: 3px;
   margin-bottom: 15px;
 }
-
 .hero .hero-text h2 {
   display: inline-block;
   margin: 0;
@@ -483,14 +596,12 @@ SECTION TITLE
 .section-title {
     margin-bottom: 60px;
 }
-
 .section-title .line {
     width: 60px;
     height: 4px;
     background-color: var(--c-brand);
     margin: 16px auto 24px auto;
 }
-
 .section-title p {
     max-width: 500px;
     margin-left: auto;
@@ -518,13 +629,11 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
 #timeline h1 b {
     color: var(--c-brand);
 }
-
 .timeline {
     list-style: none;
     padding: 20px 0 20px;
     position: relative;
 }
-
 .timeline:before {
       top: 0;
        bottom: 0;
@@ -535,22 +644,18 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
       left: 50%;
         margin-left: -1.5px;
     }
-
 .timeline > li {
         margin-bottom: 20px;
         position: relative;
     }
-
   .timeline > li:before,
   .timeline > li:after {
     content: " ";
     display: table;
   }
-
   .timeline > li:after {
     clear: both;
   }
-
   .timeline > li > .timeline-panel {
     width: 46%;
     float: left;
@@ -562,7 +667,6 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     border-radius: 10px;
   }
-
   .timeline > li > .timeline-panel:before {
     position: absolute;
     top: 26px;
@@ -574,7 +678,6 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
     border-bottom: 15px solid transparent;
     content: " ";
   }
-
   .timeline > li > .timeline-panel:after {
     position: absolute;
     top: 27px;
@@ -586,7 +689,6 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
     border-bottom: 14px solid transparent;
     content: " ";
   }
-
         .timeline > li > .timeline-badge {
             zoom: 125%;
             color: #fff;
@@ -605,103 +707,67 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
             border-top-left-radius: 50%;
             border-bottom-right-radius: 50%;
             border-bottom-left-radius: 50%;
-        }
-
-        /* CADANGAN */
-        /* .timeline > li > .timeline-badge {
-            zoom: 150%;
-            color: #fff;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            font-size: 1.4em;
-            text-align: center;
-            position: absolute;
-            top: 16px;
-            left: 50%;
-            margin-left: -25px;
-            background-color: #999999;
-            z-index: 100;
-            border-top-right-radius: 50%;
-            border-top-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-            border-bottom-left-radius: 50%;
-        } */
-
+        }        
         .timeline > li.timeline-inverted > .timeline-panel {
             float: right;
         }
-
             .timeline > li.timeline-inverted > .timeline-panel:before {
                 border-left-width: 0;
                 border-right-width: 15px;
                 left: -15px;
                 right: auto;
             }
-
             .timeline > li.timeline-inverted > .timeline-panel:after {
                 border-left-width: 0;
                 border-right-width: 14px;
                 left: -14px;
                 right: auto;
             }
-
 .timeline-badge.orange {
     background-color: #F05737 !important;
 }
-
 .timeline-badge.blue {
     background-color: #17B1FF !important;
 }
-
 .timeline-badge.yellow {
     background-color: #FFCC2B !important;
 }
-
 .timeline-title {
     margin-top: 0;
     color: inherit;
 }
-
 .timeline-body > p,
 .timeline-body > ul {
     margin-bottom: 0;
 }
-
     .timeline-body > p + p {
         margin-top: 5px;
     }
-
 @media (max-width: 767px) {
     ul.timeline:before {
         left: 40px;
     }
-
     ul.timeline > li > .timeline-panel {
         width: calc(100% - 90px);
         width: -moz-calc(100% - 90px);
         width: -webkit-calc(100% - 90px);
     }
-
     ul.timeline > li > .timeline-badge {
       zoom: normal;  
       left: 15px;
         margin-left: 0;
         top: 16px;
     }
-
     ul.timeline > li > .timeline-panel {
         float: right;
         background: linear-gradient(105deg, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 100%);
     }
-
         ul.timeline > li > .timeline-panel:before {
             border-left-width: 0;
             border-right-width: 15px;
             left: -15px;
             right: auto;
         }
-
         ul.timeline > li > .timeline-panel:after {
             border-left-width: 0;
             border-right-width: 14px;
@@ -716,17 +782,14 @@ VIDEO PROFIL
 #profil h1 {
   font-size: 25px ;
 }
-
 #profil h1 b {
   color: var(--c-brand-blue);
 }
-
 #profil h2 {
   padding: 0px 8px;
   font-size: medium;
   color: var(--c-brand);
 }
-
 #profil iframe {
   position: absolute;
   transform: translate(2%);
@@ -751,37 +814,30 @@ KEUNGGULAN
     font-size: larger;
     color: var(--c-brand);
   }
-
 .keunggulan {
   padding: 140px 0px 120px 0px;
 }
-
 #keunggulan .phone-image {
   max-width: 75%;
   margin-right: 45px;
 }
-
 #keunggulan .services .item {
   margin-bottom: 30px;
 }
-
 #keunggulan .services .item .icon {
   float: left;
   margin-right: 25px;
 }
-
 #keunggulan .services .item .icon img {
   max-width: 70px;
   padding-bottom: 100px;
 }
-
 #keunggulan .services .item h4 {
   color: var(--c-body);
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
 }
-
 #keunggulan .services .item p {
   color: var(--c-body-3);
 }
@@ -793,13 +849,11 @@ LAYANAN (INILAH YANG KAMI TAWARKAN)
     font-size: medium;
     color: var(--c-brand);
   }
-
 .layanan {
     position: relative;
     overflow: hidden;
     z-index: 2;
 }
-
 .layanan::after {
     content: "";
     width: 40px;
@@ -810,19 +864,16 @@ LAYANAN (INILAH YANG KAMI TAWARKAN)
     right: 0;
     transition: var(--transition);
 }
-
 .layanan:hover::after {
     width: 100%;
     height: 100%;
     background: var(--c-brand);
     z-index: -1;
 }
-
 .layanan:hover h5,
 .layanan:hover p {
     color: var(--c-brand-white);
 }
-
 .layanan:hover .iconbox {
     background-color: rgba(255,255,255,0.2);
     color: var(--c-brand-white);
@@ -836,11 +887,9 @@ REVIEW / TESTIMONI
     text-transform: uppercase;
     color: var(--c-brand);
 }
-
 .testimoni-head {
     position: relative;
 }
-
 .testimoni-head::after {
     content: "";
     width: 28px;
@@ -850,10 +899,9 @@ REVIEW / TESTIMONI
     background-color: var(--c-brand-white);
     transform: rotate(45deg);
 }
-
 .testimoni-person img {
-  max-width: 75px;
-  max-height: 75px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
 }
 
@@ -864,7 +912,6 @@ BACKGROUND PAKET
     position: relative;
     z-index: 2;
 }
-
 #paket::after {
     content: "";
     width: 100%;
@@ -877,29 +924,25 @@ BACKGROUND PAKET
     left: 0;
     z-index: -1;
 }
-
 #paket .form-control {
     border-radius: 0;
 }
-
 #paket .form-control:focus {
     box-shadow: none;
     border-color: var(--c-brand);
 }
 
 /* ========================================
-PAKET (UNTUK FILTER PAKET)
+PAKET (FILTER PAKET)
 ======================================== */
 .paket {
   padding: 10px 5px;
   background-color: var(--body-clr);
   border-radius: 10px;
 }
-
 .paket .button-group{
   width: 100%;
   padding: 3px 0%;
-  /* background-color: var(--body-clr); */
   border-radius: 10px;
   justify-self: center;
   flex-wrap: wrap;
@@ -932,16 +975,14 @@ PAKET (UNTUK FILTER PAKET)
   background-color: var(--c-brand-blue);
   color: var(--c-brand-white);
 }
-div.gallery{
+div.paketCard{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 } 
-
-div.gallery .item{
+div.paketCard .item{
   position: static;
 }
-
 .item .ambil-paket {
   background-color: var(--c-brand);
   position: absolute;
@@ -954,14 +995,13 @@ div.gallery .item{
   border-radius: 10px;
   opacity: 0;
 }
-
 .item:hover .ambil-paket {
   opacity: 1;
   bottom: 24px;
 }
 
 /*=============================
-	Start Pricing Table CSS
+	PAKET (CARD / ISI)
 ===============================*/
 #paket{
 	background:#f9f9f9;
@@ -979,20 +1019,6 @@ div.gallery .item{
 	margin: 15px 0;
 	padding: 45px 35px 30px 35px;
 }
-/* #paket .single-table-fav {
-  justify-self: center;
-  text-align: center;
-  max-width: 95%;
-  border-radius: 15px;
-	background: #fff;
-	border: 1px solid #ddd;
-  position: static;
-	overflow: hidden;
-	margin: 15px 0;
-	padding: 45px 35px 30px 35px;
-  border-color: var(--c-brand-blue);
-  border-width: 3px;
-} */
 
 /* Table Head */
 #paket .single-table .table-head {
@@ -1077,10 +1103,6 @@ div.gallery .item{
 	font-size: 16px;
 	margin-right: 10px;
 }
-/*=============================
-	End Pricing Table CSS
-===============================*/
-
 
 /* ========================================
 APPLY / GABUNG JADI TENTOR
@@ -1088,13 +1110,10 @@ APPLY / GABUNG JADI TENTOR
 #apply h1 b {
   color: var(--c-brand-blue)
 }
-
 #apply h2 {
   font-size: medium;
   color: var(--c-brand);
 }
-
-
 #apply img {
   object-fit: cover;
   width: 280px;
@@ -1112,7 +1131,6 @@ FOOTER
 footer {
     padding-top: 120px;
 }
-
 .footer-top {
     margin-inline: 1rem;
     padding-bottom: 40px;
@@ -1122,27 +1140,22 @@ footer {
     width: 170px;
     height: 80px;
 }
-
 .footer-bottom {
     margin-inline: 1rem;
     padding-bottom: 10px;
 }
-
 footer li,
 footer p,
 footer a {
     color: rgba(255,255,255,0.7);
 }
-
 footer p {
   font-size: 15px;
 }
-
 footer ul {
     list-style: none;
     padding: 0;
 }
-
 footer .line {
     width: 40px;
     height: 4px;
@@ -1150,7 +1163,6 @@ footer .line {
     margin-top: 12px;
     margin-bottom: 24px;
 }
-
 .social-icons a {
     width: 40px;
     height: 40px;
@@ -1160,7 +1172,6 @@ footer .line {
     background-color: rgba(255,255,255,0.1);
     border-radius: 100px;
 }
-
 .social-icons a:hover {
     background-color: var(--c-brand);
     color: white;
@@ -1174,7 +1185,6 @@ BREAKPOINTS
   .header .nav-link {
     align-items: center;
   }
-
   .navbar-brand{
     max-width: 30%;
     max-height: 30%;
@@ -1206,13 +1216,11 @@ BREAKPOINTS
   }
 }
 
-
 @media screen and (min-width: 576px) {
   /* HEADER */
   .header .nav-link {
     margin-top: 1px;
   }
-
   .navbar-brand {
     max-width: 25%;
     max-height: 25%;
@@ -1255,7 +1263,6 @@ BREAKPOINTS
   #layanan h1 {
     font-size: 39px;
   }
-
   #layanan h2 {
     font-size: larger;
   }
@@ -1283,7 +1290,6 @@ BREAKPOINTS
     padding: 3px 0px;
     box-shadow: var(--box-shadow);
   }
-
   .navbar-brand {
     max-width: 13%;
     max-height: 13%;
@@ -1334,6 +1340,7 @@ BREAKPOINTS
     min-width: 370px;
   }
 
+  /* PROFIL VIDEO */
   #profil iframe {
     max-width: 85%;
     max-height: 85%;
@@ -1415,35 +1422,31 @@ BREAKPOINTS
   }
 }
 
-
-
 @media (max-width: 991.98px) {
+  /* HEADER */
   .header h6 {
     margin-right: 13px;
   }
 
+  /* HERO */
   .hero .hero-content {
     padding: 0 15px;
   }
-  
   .hero .hero-text p {
     font-size: 25px;
   }
-  
   .hero .hero-text h1 {
     font-size: 45px;
   }
-  
   .hero .hero-text h2 {
     font-size: 25px;
     height: 25px;
   }
-  
   .hero .hero-btn .btn {
     padding: 12px 30px;
     letter-spacing: 1px;
   }
-
+  /* KEUNGGULAN */
   .keunggulan {
     position: relative;
     background-image: none;
@@ -1475,45 +1478,42 @@ BREAKPOINTS
     text-align: left;
   }
 
-  .layanan {
+  /* LAYANAN */
+  /* .layanan {
     background: linear-gradient(105deg, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 100%);
-  }
+  } */
 }
 
 @media (max-width: 767.98px) {
+  /* HERO  */
   .hero,
   .hero .hero-text,
   .hero .hero-btn {
       width: 95%;
       text-align: center;
   }
-  
   .hero .hero-text p {
       font-size: 18px;
   }
-  
   .hero .hero-text h1 {
       font-size: 35px;
   }
-  
   .hero .hero-text h2 {
       font-size: 22px;
       height: 22px;
   }
-  
   .hero .hero-btn .btn {
       padding: 10px 15px;
       letter-spacing: 1px;
   }
 
+  /* KEUNGGULAN  */
   #keunggulan .phone-image {
     bottom: -280px;
   }
-
   #keunggulan .services .item .icon img {
   padding-bottom: 35px;
   }
-
   #keunggulan .services .item  {
     min-width: 490px;
     justify-self: center;
@@ -1521,37 +1521,32 @@ BREAKPOINTS
 }
 
 @media (max-width: 575.98px) {
-  #hero.section-padding {
-    padding: 30px 0px;
-  }
-
+   /* HERO  */
   .hero .hero-text p {
     font-size: 25.5px;
     line-height: 5px;
   }
-  
   .hero .hero-text h1 {
     font-size: 30px;
   }
-  
   .hero .hero-text h2 {
     font-size: 15px;
     line-height: 25px;
   }
-
   .hero .hero-text h2 a {
     font-size: 15px;
   }
-  
   .hero .hero-btn .btn {
     padding: 8px 10px;
     letter-spacing: 0;
   }
 
+  /* PROFIL VIDEO */
   #profil iframe {
     box-shadow: 5px 3px 5px var(--c-brand-secondary), -5px 5px 5px var(--c-brand);
   }
 
+  /* KEUNGGULAN  */
   #keunggulan h1 {
     font-size: 29.52px;
   }
@@ -1563,15 +1558,12 @@ BREAKPOINTS
     font-size: 16px;
     color: var(--c-brand);
   }
-
   #keunggulan .phone-image {
     max-width: 50%;
   }
-
   #keunggulan .services .item .icon img {
   padding-bottom: 90px;
   }
-
   #keunggulan .services .item  {
     min-width: auto;
     justify-self: center;
@@ -1579,15 +1571,16 @@ BREAKPOINTS
 }
 
 @media (max-width: 350px) {
+  /* NAVBAR */
   .navbar {
     margin: 0px -3px;
     box-shadow: var(--box-shadow);
 }
 
+/* KEUNGGULAN */
   #keunggulan .services .item .icon img {
   padding-bottom: 170px;
   }
-
   #keunggulan .services .item h4 {
   font-size: 18.5px;
   }

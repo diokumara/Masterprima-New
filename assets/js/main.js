@@ -25,23 +25,45 @@ $(window).load(function(){
 
     portfolioIsotope.isotope({ filter: $(this).data('filter') });
   });
-})
+});
 
-// ========================================================================= //
-// CLOSE NAVBAR
-// ========================================================================= //
-  const menuBtn = document.getElementById('menu-btn');
-  const navbar = document.getElementById('navbar');
-  menuBtn.addEventListener('click', () => {
-    const isOpen = navbar.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', isOpen);
-  });
-  // Close navbar when any nav link is clicked (on small screen)
-  navbar.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navbar.classList.contains('open')) {
-        navbar.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', false);
-      }
+// ===========================================================================
+// To-top (Scroll Up)
+// ==========================================================================
+// const toTop = document.querySelector(".to-top");
+
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 100) {
+//     toTop.classList.add("active");
+//   } else {
+//     toTop.classList.remove("active");
+//   }
+// });
+
+// ===========================================================================
+// FLOATING BUTTON V2
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    // You can add additional functionality here if needed
+    // For example, track clicks on the WhatsApp button
+    const whatsappButton = document.querySelector('.whatsapp-button');
+    
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', function() {
+            // You can add analytics tracking here
+            console.log('WhatsApp button clicked');
+            
+            // Or send an event to Google Analytics
+            // gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Floating Button'});
+        });
+    }
+    
+    // Optional: Hide button when printing
+    window.addEventListener('beforeprint', function() {
+        document.querySelector('.floating-whatsapp').style.display = 'none';
     });
-  });
+    
+    window.addEventListener('afterprint', function() {
+        document.querySelector('.floating-whatsapp').style.display = 'block';
+    });
+});
