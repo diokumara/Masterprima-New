@@ -4,23 +4,17 @@
 /* VARIABLES */
 :root {
   --body-clr: #f6f9fec2;
-  --primary-clr: #05555c;
   --primary-light-clr: #eaf3fa;
-  --link-clr: #186f78;
-  --text-clr: #3f7277;
   --c-dark: #212529;
   --c-brand: #F05737;
   --c-brand-secondary: #FFCC2B;
   --c-brand-blue: #17B1FF;
   --c-brand-white: #ffffff;
-  --c-brand-light: #fb9f8c;
   --c-brand-rgb: 240, 87, 55;
   --c-brand-rgb-2: 252, 252, 252;
   --c-body: #220600;
-  --c-body-2: #b3afaf;
-  --c-body-3: #585858;
+  --c-body-2: #585858;
   --font-base: 'Poppins', sans-serif;
-  --font-base-2: 'Poppins', helvetica;
   --box-shadow: 0px 15px 25px rgba(48, 0, 0, 0.057);
   --box-shadow-2: 0px 5px 5px rgba(97, 97, 97, 0.342);
   --transition: all 0.5s ease;
@@ -271,58 +265,6 @@ LOGIN MASUK / DAFTAR
 }
 
 /* ========================================
-WA FLOATING BUTTON
-======================================== */
-/* .wa_button {
-  font-size: 15px;
-  position: fixed;
-  right: 30px;
-  bottom: 50px;
-  color: var(--c-body);
-  background-color: rgb(35, 243, 16);
-  padding: 5px 20px;
-  border-radius: 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--c-brand-white);
-  font-weight: 550;
-}
-.wa_button i {
-  font-size: 35px;
-  padding: 10px 10px;
-  background-color: rgb(35, 243, 16);
-  border-radius: 50%;
-  height: 47px;
-  width: 47px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 133px;
-  color: var(--c-brand-white);
-}
-.wa_button, .wa_button i {
-  z-index: 3;
-}
-
-@media (max-width: 576px) {
-  .wa_button {
-    background-color: transparent;
-  }
-  .wa_button span {
-    display: none;
-  }
-  .wa_button i {
-    font-size: 40px;
-    height: 55px;
-    width: 55px;
-    right: 0;
-    transition: ease-in-out;
-  }
-} */
-
-/* ========================================
 WA FLOATING BUTTON V2
 ======================================== */
 /* Floating WhatsApp Button Styles */
@@ -412,34 +354,6 @@ WA FLOATING BUTTON V2
         display: none;
     }
 }
-
-
-/* SCROLL UP BTN */
-/* .to-top {
-  background: var(--c-brand);
-  position: fixed;
-  bottom: 16px;
-  right: 32px;
-  width: 40px;
-  height: 40px;
-  border-radius: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  font-weight: 600;
-  color: var(--c-brand-white);
-  text-decoration: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .4s;
-}
-
-.to-top.active {
-  bottom: 32px;
-  pointer-events: auto;
-  opacity: 1;
-} */
 
 /* ========================================
 HERO
@@ -839,7 +753,7 @@ KEUNGGULAN
   margin-bottom: 12px;
 }
 #keunggulan .services .item p {
-  color: var(--c-body-3);
+  color: var(--c-body-2);
 }
 
 /* ========================================
@@ -853,6 +767,10 @@ LAYANAN (INILAH YANG KAMI TAWARKAN)
     position: relative;
     overflow: hidden;
     z-index: 2;
+}
+.layanan p {
+    color: var(--c-body-2);
+    font-size: 16px;
 }
 .layanan::after {
     content: "";
@@ -882,27 +800,135 @@ LAYANAN (INILAH YANG KAMI TAWARKAN)
 /* ========================================
 REVIEW / TESTIMONI
 ======================================== */
-.testimoni small {
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--c-brand);
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
 }
-.testimoni-head {
-    position: relative;
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
 }
-.testimoni-head::after {
-    content: "";
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    bottom: -14px;
-    background-color: var(--c-brand-white);
-    transform: rotate(45deg);
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
 }
-.testimoni-person img {
-  width: 75px;
-  height: 75px;
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px 5px 75px 75px;
+}
+#overlay-1{
+  background-color: var(--c-brand);
+}
+#overlay-2{
+  background-color: var(--c-brand-blue) ;
+}
+#overlay-3{
+  background-color: var(--c-brand-secondary);
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: var(--primary-light-clr);
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--c-brand-blue);
+}
+.name{
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.job{
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  }
+  #job-1{
+    color: var(--c-brand);
+  }
+  #job-2{
+    color: var(--c-brand-blue);
+  }
+  #job-3{
+    color: var(--c-brand-secondary);
+  }
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.star{
+  border: none;
+  font-size: 16px;
+  color: rgb(228, 167, 0);
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin: 14px;
+  transition: all 0.3s ease;
+}
+
+.swiper-navBtn{
+  color: var(--c-brand);
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: var(--c-brand-blue);
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
 }
 
 /* ========================================

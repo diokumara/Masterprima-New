@@ -28,20 +28,7 @@ $(window).load(function(){
 });
 
 // ===========================================================================
-// To-top (Scroll Up)
-// ==========================================================================
-// const toTop = document.querySelector(".to-top");
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 100) {
-//     toTop.classList.add("active");
-//   } else {
-//     toTop.classList.remove("active");
-//   }
-// });
-
-// ===========================================================================
-// FLOATING BUTTON V2
+// WA FLOATING BUTTON V2
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', function() {
     // You can add additional functionality here if needed
