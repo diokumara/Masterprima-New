@@ -1,3 +1,6 @@
+// ============================================================================ //
+// AOS 
+// ======================================================================== //
 AOS.init({
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 120, // offset (in px) from the original trigger point
@@ -7,10 +10,10 @@ AOS.init({
   once: false, // whether animation should happen only once - while scrolling down
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-});
+})
 
 // ========================================================================= //
-//  Porfolio isotope and filter
+//  PORTFOLIO ISOTOPE AND FILTER
 // ========================================================================= //
 $(window).load(function(){
 
@@ -24,8 +27,8 @@ $(window).load(function(){
     $(this).addClass('filter-active');
 
     portfolioIsotope.isotope({ filter: $(this).data('filter') });
-  });
-});
+  })
+})
 
 // ===========================================================================
 // WA FLOATING BUTTON V2
@@ -42,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Or send an event to Google Analytics
             // gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Floating Button'});
-        });
+        })
     }
     
     // Optional: Hide button when printing
@@ -52,5 +55,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('afterprint', function() {
         document.querySelector('.floating-whatsapp').style.display = 'block';
-    });
-});
+    })
+})
