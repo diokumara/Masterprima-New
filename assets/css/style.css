@@ -128,12 +128,6 @@ img {
   color: var(--c-brand-white);
 }
 
-@media (min-width: 576px) {
-  .btn-brand {
-    padding: 2px 20px;
-  }
-}
-
 .btn-brand-1 {
   padding: 15px 20px;
   background-color: var(--c-brand);
@@ -952,7 +946,7 @@ REVIEW / TESTIMONI
 .star{
   border: none;
   font-size: 16px;
-  color: rgb(228, 167, 0);
+  color: var(--c-brand-secondary);
   padding: 8px 16px;
   border-radius: 6px;
   margin: 14px;
@@ -1281,19 +1275,12 @@ BREAKPOINTS
 
   /* NAVBAR */
   .navbar {
-    padding: 8px 0px;
+    padding: 7px 0px;
   }
 
   /* HERO */
   #hero img {
     min-width: 100%;
-  }
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    margin-right: 5rem;
-    text-align: center;
-    justify-content: center;
   }
 
   /* TENTANG */
@@ -1320,6 +1307,11 @@ BREAKPOINTS
     max-height: 25%;
   }
 
+  /* BUTTON */
+  .btn-brand {
+    padding: 2px 20px;
+  }
+
   /* HERO */
   #hero img {
     min-width: 100%;
@@ -1327,9 +1319,7 @@ BREAKPOINTS
   .hero .hero-content .textContainer,
   .hero .hero-content .textContainer .text,
   .hero .hero-content .textContainer .text2 {
-    margin-right: -7rem;
-    text-align: center;
-    justify-content: center;
+    justify-self: center;
   }
 
   /* TENTANG */
@@ -1426,7 +1416,6 @@ BREAKPOINTS
   .hero .hero-content .textContainer .text2 {
     text-align: left;
     justify-content: left;
-    margin-right: -7rem;
   }
 
   /* TENTANG */
@@ -1468,6 +1457,12 @@ BREAKPOINTS
   }
   .navbar-nav .nav-link.menu {
     margin: 10px 10px;
+  }
+
+  .hero .hero-content .textContainer,
+  .hero .hero-content .textContainer .text,
+  .hero .hero-content .textContainer .text2 {
+    justify-self: left;
   }
 
   /* TIMELINE (PERJALANAN MENJADI ASN) */
@@ -1633,6 +1628,12 @@ BREAKPOINTS
   .hero .hero-btn .btn {
     padding: 8px 10px;
     letter-spacing: 0;
+  }
+
+  .hero .hero-content .textContainer,
+  .hero .hero-content .textContainer .text,
+  .hero .hero-content .textContainer .text2 {
+    justify-self: center;
   }
 
   /* PROFIL VIDEO */

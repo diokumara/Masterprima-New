@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 15);
         }
-    });
-});
+    })
+})
 
 // ========================================================================= //
 //  PORTFOLIO ISOTOPE AND FILTER
