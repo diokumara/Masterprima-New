@@ -12,6 +12,43 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 })
 
+// ============================================================================ //
+// SCROLL UP BUTTON
+// ============================================================================ //
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    // Tampilkan tombol ketika pengguna scroll ke bawah 300px
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    // Scroll ke atas ketika tombol diklik
+    scrollToTopBtn.addEventListener('click', function() {
+        // Untuk browser modern
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Untuk browser lama (fallback)
+        if (!('scrollBehavior' in document.documentElement.style)) {
+            const scrollStep = -window.scrollY / (500 / 15);
+            const scrollInterval = setInterval(function() {
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                } else {
+                    clearInterval(scrollInterval);
+                }
+            }, 15);
+        }
+    });
+});
+
 // ========================================================================= //
 //  PORTFOLIO ISOTOPE AND FILTER
 // ========================================================================= //
